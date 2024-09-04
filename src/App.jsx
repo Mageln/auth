@@ -19,7 +19,7 @@ const App = () => {
     }).catch((error) => {
       setError(true)
       setSuccess(false)
-      console.error(error); 
+      console.error(error);
     })
   }
 
@@ -97,8 +97,8 @@ const App = () => {
             <Button type="primary" htmlType="submit">
               Войти на сайт
             </Button>
-            <span style={{position: "relative", top:20}}>
-            {success ? <Alert message="Успешный вход!" type='success' /> : error ? <Alert message="Ошибка!Пользователь не найден" type='error' /> : null}
+            <span style={{ position: "relative", top: 20 }}>
+              {success ? <Alert message="Успешный вход!" type='success' /> : error ? <Alert message="Ошибка!Пользователь не найден" type='error' /> : null}
             </span>
           </Form.Item>
         </Form>

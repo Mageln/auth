@@ -1,17 +1,14 @@
-
-
 export const onFinish = (value) => {
-    fetch("address", {
-        method:"Post",
-        headers:{
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(value)
+  fetch("address", {
+    method: "Post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(value),
+  })
+    .then(() => {
+      const responseData = { message: "Успешная авторизация" };
+      console.log("success:", responseData);
     })
-    .then(response => {
-        const responseData = {message: "Успешная авторизация"};
-        console.log("success:", responseData)
-    })
-    .catch(error => console.log("Error", error))
-
-}
+    .catch((error) => console.log("Error", error));
+};
